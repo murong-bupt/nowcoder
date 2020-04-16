@@ -1,10 +1,8 @@
-package com.murong.nowcoder.model;
+package com.murong.nowcoder.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author xdy
@@ -30,4 +28,10 @@ public class IndexController {
         return String.format("This is the profile page of " +
                 "%s组的%d号用户，type为%d,key为%s",groupId,userId,type,key);
     }
+
+    @RequestMapping(value = "/vm",method = RequestMethod.GET)
+    public String template(){
+        return "home.html";
+    }
+
 }
