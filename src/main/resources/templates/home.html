@@ -1,3 +1,7 @@
-<html>
-Hello
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<!--/*@thymesVar id="value1" type="java.lang.String"*/-->
+<!--/*@thymesVar id="value2" type="java.lang.String"*/-->
+<p th:text="${value1}+11"/>
+</body>
 </html>
